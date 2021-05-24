@@ -1,0 +1,40 @@
+{
+  "name": "release-it-test",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kolobok12309/release-it-test"
+  },
+  "license": "MIT",
+  "scripts": {
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "release-it": "^14.6.2",
+    "release-it-lerna-changelog": "^3.1.0"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "Released v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "release-it-lerna-changelog": {}
+    }
+  },
+  "changelog": {
+    "labels": {
+      "feature": "New Features",
+      "hotfix": "Hot Fixes",
+      "bugfix": "Bug Fixes",
+      "routine": "Miscellaneous"
+    }
+  }
+}
