@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "release": "release-it"
+    "release": "node ./node_modules/release-it/bin/release-it.js"
   },
   "devDependencies": {
     "lerna-changelog": "^1.0.1",
